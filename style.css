@@ -1,0 +1,172 @@
+/* global*/
+
+/* font family */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:ital,wght@1,900&display=swap");
+
+/*box sizing*/
+* {
+  box-sizing: border-box;
+}
+
+/* root variables */
+/* check color contrast */
+:root {
+  --blue: rgb(0, 55, 255);
+  --lightblue: dodgerblue;
+  --gray: #b0ada5;
+}
+
+/* body */
+
+body {
+  color: black;
+  background-color: white;
+
+  font-family: "Monserrat", sans-serif;
+
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* paragraphs */
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* links */
+a {
+  color: var(--blue);
+}
+a:hover,
+a:focus {
+  background-color: magenta;
+  outline: none;
+}
+
+a:focus-visible {
+  background-color: beige;
+}
+
+/* images */
+max-width: 100%;
+
+/* buttons */
+button {
+  cursor: pointer;
+  color: white;
+  background-color: var(--blue);
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: solid 2px var(--blue);
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.container {
+  /*max-width: 70rem;
+  padding-inline: 48px;*/
+  width: min(100% - 48px, 70rem);
+
+  margin-inline: auto;
+}
+
+/*---------------------*/
+
+/* header*/
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-block: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  align-items: center;
+}
+
+li:last-child a {
+  color: white;
+  background-color: var(--blue);
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+li:last-child a:hover {
+  color: magenta;
+}
+li:last-child a:focus {
+  color: magenta;
+}
+
+#logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/*banner/hero----------------*/
+#banner {
+  background-color: var(--lightblue);
+  padding-block: 200px;
+
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#banner .container {
+  text-align: center;
+}
+
+/* services----------------*/
+
+#services {
+  padding-block: 70px 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*services card---------------------*/
+
+.services-card {
+  border: solid 1px var(--gray);
+  border-radius: 20px;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  flex-basis: calc(33% - 20px);
+  flex-grow: 1;
+}
+
+i {
+  font-size: 30px;
+  color: var(--blue);
+}
+
+footer ul {
+  list-style: none;
+  padding-block: 20px;
+  background-color: var(--gray);
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
